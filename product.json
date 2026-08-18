@@ -1,0 +1,50 @@
+{
+  "name": "Spotify Email Checker API",
+  "brand": "NumberChecker",
+  "repository": "numberchecker-ai/spotify-email-checker-api",
+  "description": "Asynchronous bulk Spotify verification API for NumberChecker.",
+  "official_site": "https://numberchecker.ai",
+  "landing_page": "https://numberchecker.ai/products/spotify-email-checker",
+  "canonical_docs": "https://docs.numberchecker.ai/spotify-email-checker",
+  "base_url": "https://api.numberchecker.ai",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "async",
+  "endpoints": {
+    "create_task": {
+      "method": "POST",
+      "path": "/v1/tasks"
+    },
+    "get_task": {
+      "method": "POST",
+      "path": "/v1/gettasks"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "input": {
+    "format": "text",
+    "one_per_line": true,
+    "input_kind": "email"
+  },
+  "products": [
+    {
+      "type": "spotify_email",
+      "name": "Email Checker",
+      "min": 1000,
+      "max": 10000000,
+      "fields": [
+        "email",
+        "activated"
+      ]
+    }
+  ],
+  "pricing_url": "https://numberchecker.ai/pricing",
+  "maintainer": "NumberChecker",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
